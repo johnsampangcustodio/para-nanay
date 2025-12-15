@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Happy Birthday Nanay</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mochi: '#FFD1DC',
+              chocolate: '#4A3B32',
+              blush: '#FFB7C5',
+            },
+            fontFamily: {
+              // 'display' will be the new heavy font
+              display: ['Anton', 'sans-serif'],
+              // 'sans' remains rounded for UI buttons/labels
+              sans: ['Quicksand', 'sans-serif'],
+              serif: ['Lora', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Ensure smooth scrolling and hide horizontal scrollbar */
+      html, body {
+        overflow-x: hidden;
+        background-color: #FFD1DC;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "framer-motion": "https://esm.sh/framer-motion@10.16.4?deps=react@18.3.1,react-dom@18.3.1",
+    "lucide-react": "https://esm.sh/lucide-react@0.292.0?deps=react@18.3.1,react-dom@18.3.1",
+    "react-confetti": "https://esm.sh/react-confetti@6.1.0?deps=react@18.3.1,react-dom@18.3.1",
+    "@splinetool/react-spline": "https://esm.sh/@splinetool/react-spline@4.0.0?deps=react@18.3.1,react-dom@18.3.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
