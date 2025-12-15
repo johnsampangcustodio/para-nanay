@@ -26,6 +26,14 @@ export default function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Safety fallback: if Spline fails to load or takes too long (e.g., 6 seconds), force remove loader
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 6000);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Parallax Logic for text container
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -152,8 +160,8 @@ export default function App() {
               <p className="text-lg md:text-xl leading-relaxed font-serif text-chocolate/90">
                 Happy Birthday!<br/>
                 I appreciate everything you've sacrificed for the family.<br/>
-                Everyday I am grateful that you were willing to sacrifice
-                your passions to raise and build our family. <br/>I'm grateful for your
+                Everyday I am grateful that you were willing to sacrifice<br/>
+                your passions to raise and build our family. I'm grateful for your<br/>
                 kindness; that through all the past drama and what might come, you always
                 show patience. <br/> I'm excited for many more years of happiness and love.
               </p>
